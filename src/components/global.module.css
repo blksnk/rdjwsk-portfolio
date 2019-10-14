@@ -1,0 +1,103 @@
+.sideNav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.title {
+  font-family: 'Monument';
+  font-weight: bold;
+  font-size: 13vh;
+  text-decoration: none;
+  color: var(--off-white);
+  text-orientation: mixed;
+  writing-mode: vertical-lr;
+  line-height: 5rem;
+
+}
+
+.titleLetter {
+  transition: .3s color;
+}
+
+.titleLetter:hover {
+  color: var(--white);
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.navLink {
+  font-family: 'Monument';
+  font-weight: normal;
+  color: var(--grey);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: .6s color;
+  margin-top: .5rem;
+}
+
+.navLink:hover {
+  color: var(--off-white);
+  transition-duration: .6s;
+}
+
+section .pageTitle:first-child {
+  margin-bottom: 2rem;
+}
+
+.pageTitle {
+  font-family: 'Monument';
+  font-weight: bold;
+  font-size: 1.8rem;
+  transition-duration: .6s;
+  letter-spacing: auto;
+}
+
+.text {
+  font-family: 'Gopher Normal';
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.pageTitle:hover {
+  letter-spacing: .3rem;
+}
+
+.pickerWrapper {
+  position: fixed;
+  bottom: .5rem;
+  right: .5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.showPicker {
+  font-family: 'Monument';
+  font-weight: normal;
+  color: var(--grey);
+  background: none;
+  border: none;
+  margin-top: .5rem;
+  transition-duration: .3s;
+}
+
+.showPicker:focus {
+  outline: none;
+}
+
+.showPicker:hover {
+  background: -webkit-linear-gradient(right, red, orange , yellow, lime, cyan, blue, violet);
+  background: -o-linear-gradient(right, red, orange, yellow, lime, cyan, blue, violet);
+  background: -moz-linear-gradient(right, red, orange, yellow, lime, cyan, blue, violet);
+  background: linear-gradient(to right, red, orange , yellow, lime, cyan, blue, violet);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

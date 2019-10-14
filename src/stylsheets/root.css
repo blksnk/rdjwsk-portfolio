@@ -1,0 +1,71 @@
+:root {
+  --white: #FFF;
+  --off-white: #eae8db;
+  --light-grey: #C2C1B4;
+  --grey: #2F2F2F;
+  --dark-grey: #1E1E1E;
+  --black: #000;
+  --primary: #0009FF;
+  --secondary: #002EFF;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  background-color: var(--dark-grey);
+}
+
+h1, h2, h3, p, span, button {
+  color: var(--off-white);
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  color: var(--light-grey);
+  /* margin-bottom: 1rem; */
+}
+
+h1:hover {
+  color: var(--white);
+}
+
+main {
+  padding: .5rem;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+aside {
+  width: min-content;
+  height: 100%;
+  padding-right: .5rem;
+}
+
+section {
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-bottom: 4rem;
+  flex: 1;
+  height: 100%;
+}
+
+.active {
+  color: var(--primary) !important;
+}
+
+@media screen and (orientation:portrait) {
+  body: {
+    background-color: var(--primary);
+  }
+}

@@ -1,26 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { Switch, Route } from 'react-router-dom'
+
+import SideNav from './components/SideNav.js'
+import ChangeColor from './components/ChangeColor.js'
+
+import Projects from './views/Projects.js'
+import About from './views/About.js'
+import Contact from './views/Contact.js'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="App">
+      <SideNav/>
+      <Router/>
+      {<ChangeColor/>}
+    </main>
   );
 }
 
-export default App;
+const Router = () => (
+  <Switch>
+    <Route path='/projects' component={Projects}/>
+    <Route path='/about' component={About}/>
+    <Route path='/contact' component={Contact}/>
+    <Route path='/' component={HomeRedirect}/>
+  </Switch>
+)
+
+const HomeRedirect = ({ history }) => {
+  React.useEffect(() => {
+    history.push('/projects')
+  })
+  return null
+}
+
+export default App

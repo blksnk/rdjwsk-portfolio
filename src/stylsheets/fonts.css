@@ -1,0 +1,113 @@
+/* monument */
+
+@font-face {
+  src: url(../assets/fonts/monument-regular.otf);
+  font-family: 'Monument';
+  font-weight: normal;
+}
+
+@font-face {
+  src: url('../assets/fonts/monument-extrabold.otf');
+  font-family: 'Monument';
+  font-weight: bold;
+}
+
+/* gopher normal */
+
+@font-face {
+  src: url('../assets/fonts/Gopher-Hairline.otf');
+  font-family: 'Gopher Normal';
+  font-weight: 100;
+}
+
+@font-face {
+  src: url('../assets/fonts/Gopher-Thin.otf');
+  font-family: 'Gopher Normal';
+  font-weight: 200;
+}
+
+@font-face {
+  src: url('../assets/fonts/Gopher-Light.otf');
+  font-family: 'Gopher Normal';
+  font-weight: 300;
+}
+
+@font-face {
+  src: url('../assets/fonts/Gopher-Regular.otf');
+  font-family: 'Gopher Normal';
+  font-weight: 400;
+}
+
+@font-face {
+  src: url('../assets/fonts/Gopher-Medium.otf');
+  font-family: 'Gopher Normal';
+  font-weight: 500;
+}
+
+@font-face {
+  src: url('../assets/fonts/Gopher-Bold.otf');
+  font-family: 'Gopher Normal';
+  font-weight: 600;
+}
+
+@font-face {
+  src: url('../assets/fonts/Gopher-Heavy.otf');
+  font-family: 'Gopher Normal';
+  font-weight: 700;
+}
+
+@font-face {
+  src: url('../assets/fonts/Gopher-Black.otf');
+  font-family: 'Gopher Normal';
+  font-weight: 800;
+}
+
+/* gopher text */
+
+@font-face {
+  src: url('../assets/fonts/GopherText-Hairline.otf');
+  font-family: 'Gopher Text';
+  font-weight: 100;
+}
+
+@font-face {
+  src: url('../assets/fonts/GopherText-Thin.otf');
+  font-family: 'Gopher Text';
+  font-weight: 200;
+}
+
+@font-face {
+  src: url('../assets/fonts/GopherText-Light.otf');
+  font-family: 'Gopher Text';
+  font-weight: 300;
+}
+
+@font-face {
+  src: url('../assets/fonts/GopherText-Regular.otf');
+  font-family: 'Gopher Text';
+  font-weight: 400;
+}
+
+@font-face {
+  src: url('../assets/fonts/GopherText-Medium.otf');
+  font-family: 'Gopher Text';
+  font-weight: 500;
+}
+
+@font-face {
+  src: url('../assets/fonts/GopherText-Bold.otf');
+  font-family: 'Gopher Text';
+  font-weight: 600;
+}
+
+@font-face {
+  src: url('../assets/fonts/GopherText-Heavy.otf');
+  font-family: 'Gopher Text';
+  font-weight: 700;
+}
+
+@font-face {
+  src: url('../assets/fonts/GopherText-Black.otf');
+  font-family: 'Gopher Text';
+  font-weight: 800;
+}
