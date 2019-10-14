@@ -1,24 +1,29 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import Nav from './Nav.js'
+import ChangeColor from './ChangeColor.js'
 import g from './global.module.css'
 
-const SideNav = () => (
-  <div className={g.sideNav}>
-    <Title/>
-    {/*<Nav/>*/}
-  </div>
-)
 
-const Title = () => (
-  <NavLink to='/projects' className={g.title}>
-    <span className={g.titleLetter}>R</span>
-    <span className={g.titleLetter}>D</span>
-    <span className={g.titleLetter}>J</span>
-    <span className={g.titleLetter}>W</span>
-    <span className={g.titleLetter}>S</span>
-    <span className={g.titleLetter}>K</span>
-  </NavLink>
-)
+const SideNav = () => {
+  const [ easter, setEaster ] = React.useState(0)
+  return (
+    <div className={g.sideNav}>
+      <Title setEaster={setEaster} easter={easter}/>
+      {easter >= 6
+        ? <ChangeColor/>
+        : null}
+    </div>
+  )
+}
+
+const Title = ({ setEaster, easter }) => {
+  const t = 'RDJWSK'
+  return (
+  <h1 className={g.title}>
+    {t.split('').map(l => 
+      <span onClick={() => setEaster(easter + 1)} key={l} className={g.titleLetter}>{l}</span>
+    )}
+  </h1>
+)}
 
 export default SideNav

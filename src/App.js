@@ -2,7 +2,6 @@ import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 
 import SideNav from './components/SideNav.js'
-import ChangeColor from './components/ChangeColor.js'
 
 import Projects from './views/Projects.js'
 import About from './views/About.js'
@@ -13,7 +12,6 @@ function App() {
     <main className="App">
       <SideNav/>
       <Router/>
-      {<ChangeColor/>}
     </main>
   );
 }

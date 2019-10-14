@@ -38,7 +38,7 @@
 }
 
 .titleLetter:hover {
-  color: var(--white);
+  color: var(--primary);
 }
 
 .nav {
