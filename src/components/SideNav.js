@@ -4,10 +4,10 @@ import Nav from './Nav.js'
 import g from './global.module.css'
 
 const SideNav = () => (
-  <aside className={g.sideNav}>
+  <div className={g.sideNav}>
     <Title/>
-    <Nav/>
-  </aside>
+    {/*<Nav/>*/}
+  </div>
 )
 
 const Title = () => (

@@ -41,23 +41,18 @@ main {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
+  display: grid;
+  grid-template-columns: max-content 1fr;
 
-aside {
-  width: min-content;
-  height: 100%;
-  padding-right: .5rem;
 }
 
 section {
+  grid-column: 2 / 8;
+  height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
   padding-bottom: 4rem;
-  flex: 1;
-  height: 100%;
+  /* flex: 1; */
 }
 
 .active {

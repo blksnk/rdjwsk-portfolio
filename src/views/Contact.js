@@ -1,13 +1,15 @@
 import React from 'react'
-import { PageTitle, Text } from '../components/Text.js'
+import { Text } from '../components/Text.js'
+import { TopNav } from '../components/Nav.js'
 
 import s from './Contact.module.css'
 
 const Contact = () => {
   return (
     <section>
-      <PageTitle>Contact</PageTitle>
-      <Text>Got something to say to me?</Text>
+      <TopNav current='contact'/>
+
+      <Text>Got something to say?</Text>
       <Text>Feel free to drop me a message here or contact me via my socials.</Text>
       {/*<Socials/>*/}
       <Form/>

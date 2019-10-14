@@ -1,19 +1,35 @@
 .sideNav {
+  height: 100%;
+  grid-column: 1 / 2;
+  padding-right: 1rem;
+}
+
+.topNavWrapper {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.topNavWrapper > * {
+  margin-right: 1rem;
+}
+
+.topNavWrapper .pageTitle {
+  color: var(--primary);
 }
 
 .title {
   font-family: 'Monument';
   font-weight: bold;
-  font-size: 13vh;
+  font-size: 14vh;
   text-decoration: none;
   color: var(--off-white);
   text-orientation: mixed;
   writing-mode: vertical-lr;
-  line-height: 5rem;
+  line-height: 10vh;
 
 }
 
@@ -32,14 +48,18 @@
   align-items: baseline;
 }
 
+.nav .navLink {
+  margin-top: .5rem;
+}
+
 .navLink {
   font-family: 'Monument';
   font-weight: normal;
   color: var(--grey);
   text-decoration: none;
   font-size: 1rem;
-  transition: .6s color;
-  margin-top: .5rem;
+  transition: .3s color;
+  display: inline-block;
 }
 
 .navLink:hover {
@@ -47,16 +67,11 @@
   transition-duration: .6s;
 }
 
-section .pageTitle:first-child {
-  margin-bottom: 2rem;
-}
-
 .pageTitle {
   font-family: 'Monument';
   font-weight: bold;
   font-size: 1.8rem;
   transition-duration: .6s;
-  letter-spacing: auto;
 }
 
 .text {
@@ -94,10 +109,5 @@ section .pageTitle:first-child {
 }
 
 .showPicker:hover {
-  background: -webkit-linear-gradient(right, red, orange , yellow, lime, cyan, blue, violet);
-  background: -o-linear-gradient(right, red, orange, yellow, lime, cyan, blue, violet);
-  background: -moz-linear-gradient(right, red, orange, yellow, lime, cyan, blue, violet);
-  background: linear-gradient(to right, red, orange , yellow, lime, cyan, blue, violet);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--primary);
 }
