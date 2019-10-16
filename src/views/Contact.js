@@ -45,7 +45,7 @@ const initForm = {
 
 const Form = () => {
   const [ state, setState ] = React.useState(initForm)
-  const [ sent, setSent ] = React.useState(true)
+  const [ sent, setSent ] = React.useState(false)
   const changeState = (f, v) => setState({
     ...state,
     [f]: v
