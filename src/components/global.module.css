@@ -1,16 +1,20 @@
 .sideNav {
-  height: 100%;
   grid-column: 1 / 2;
-  padding-right: 1rem;
+  grid-row: 2 / 3;
+  height: 100%;
+  min-width: inherit;
 }
 
 .topNavWrapper {
+  grid-column: 1 / 4;
+  grid-row: 1 / 2;
   display: flex;
+  height: 5rem;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  flex-wrap: wrap;
-  margin-bottom: 2rem;
+  background-image: linear-gradient(to bottom, var(--dark-grey), transparent);
+  z-index: 10;
 }
 
 .topNavWrapper > * {
@@ -21,16 +25,26 @@
   color: var(--primary);
 }
 
+.topNavWrapper > .pageTitle:hover {
+  /* letter-spacing: .3rem; */
+}
+
+.topNavWrapper > .navLink:hover {
+  letter-spacing: .2rem;
+}
+
 .title {
   font-family: 'Monument';
   font-weight: bold;
-  font-size: 14vh;
-  text-decoration: none;
+  font-size: 13.5vh;
   color: var(--off-white);
+  text-decoration: none;
+  text-align: left;
+  vertical-align: top;
   text-orientation: mixed;
   writing-mode: vertical-lr;
   line-height: 10vh;
-
+  transition-duration: .3s;
 }
 
 .titleLetter {
@@ -39,6 +53,9 @@
 
 .titleLetter:hover {
   color: var(--primary);
+  animation-name: spincursor;
+  animation-duration: .5s;
+  animation-iteration-count: infinite;
 }
 
 .nav {
@@ -55,10 +72,10 @@
 .navLink {
   font-family: 'Monument';
   font-weight: normal;
-  color: var(--grey);
+  color: var(--medium-grey);
   text-decoration: none;
   font-size: 1rem;
-  transition: .3s color;
+  transition-duration: .6s;
   display: inline-block;
 }
 
@@ -71,6 +88,7 @@
   font-family: 'Monument';
   font-weight: bold;
   font-size: 1.8rem;
+  line-height: 1.8rem;
   transition-duration: .6s;
 }
 
@@ -80,18 +98,15 @@
   font-size: 1rem;
 }
 
-.pageTitle:hover {
-  letter-spacing: .3rem;
-}
-
 .pickerWrapper {
   position: fixed;
   bottom: .5rem;
-  right: .5rem;
+  right: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
+  z-index: 5;
 }
 
 .showPicker {
@@ -110,4 +125,43 @@
 
 .showPicker:hover {
   color: var(--primary);
+}
+
+.scrollIndicator {
+  position: fixed;
+  bottom: .5rem;
+  left: 1rem;
+  z-index: 30;
+}
+
+
+
+@keyframes spincursor {
+  0% {
+    cursor: nwse-resize;
+  }
+
+  25% {
+    cursor: ns-resize;
+  }
+
+  50% {
+    cursor: nesw-resize;
+  }
+
+  75% {
+    cursor: ew-resize;
+  }
+
+  100% {
+    cursor: nwse-resize;
+  }
+}
+
+/* iphone 5 */
+@media screen and (width: 320px) {
+  .title {
+    font-size: 80px;
+    line-height: auto;
+  }
 }

@@ -1,8 +1,6 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
 import ChangeColor from './ChangeColor.js'
 import g from './global.module.css'
-
 
 const SideNav = () => {
   const [ easter, setEaster ] = React.useState(0)
@@ -25,5 +23,7 @@ const Title = ({ setEaster, easter }) => {
     )}
   </h1>
 )}
+
+
 
 export default SideNav

@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin: 1.75rem -.25rem -.25rem -.25rem;
+  margin: .75rem -.25rem -.25rem -.25rem;
   max-width: 600px;
 }
 
@@ -49,18 +49,56 @@
   background-color: var(--primary);
   border: none;
   padding: .5rem;
+  color: var(--grey);
   font-family: 'Monument';
   font-weight: normal;
   font-size: 1rem;
   text-align: left;
-  transition-duration: .3s;
+  transition-duration: .6s;
 }
 
 .submit:hover {
-  letter-spacing: .2rem;
+  letter-spacing: .15rem;
   padding-left: 2rem;
 }
 
 .submit h1 {
   margin: 0 !important;
+}
+
+.sent {
+  background-color: var(--off-white);
+}
+
+.sent:hover {
+  letter-spacing: unset;
+  padding-left: .5rem;
+}
+
+.socials {
+  display: flex;
+  justify-content: flex-start;
+  margin: 1rem 4rem 2rem 0;
+  flex-wrap: wrap;
+  align-items: baseline;
+  align-content: flex-start;
+}
+
+.socialLink {
+  font-family: 'Monument';
+  font-weight: normal;
+  text-decoration: none;
+  color: var(--secondary);
+  margin-right: 1rem;
+  transition-duration: .3s;
+}
+
+.socialLink:hover {
+  text-decoration: underline;
+  color: var(--primary);
+}
+
+.email {
+  margin: 1rem 0 2rem 0;
+  display: inline-block;
 }
