@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: flex-start;
   margin: .75rem -.25rem -.25rem -.25rem;
-  max-width: 600px;
+  max-width: 40rem;
 }
 
 .formRow {
@@ -60,6 +60,10 @@
 .submit:hover {
   letter-spacing: .15rem;
   padding-left: 2rem;
+}
+
+.submit:focus {
+  outline: none;
 }
 
 .submit h1 {

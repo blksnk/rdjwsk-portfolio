@@ -1,0 +1,80 @@
+.page {
+  /* background-image: url('../assets/images/grid.svg') */
+}
+
+.card {
+  display: block;
+  position: relative;
+  min-height: 15rem;
+  margin-bottom: 3rem;
+  max-width: 40rem;
+}
+
+.cardThumbContainer {
+  overflow: hidden;
+  height: 6rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: .3s;
+  transition-timing-function: ease-out;
+}
+
+.expanded .cardThumbContainer {
+  height: unset;
+  transition-duration: .3s;
+  transition-timing-function: ease-out;
+}
+
+.cardThumb {
+  object-fit: contain;
+  max-width: 100%;
+  filter: invert(0) grayscale(1);
+  transition-duration: .3s;
+}
+
+.cardThumb:hover {
+  filter: invert(1) grayscale(1);
+}
+
+.cardTextContainer {
+  background-color: var(--grey);
+  padding-top: 1rem;
+  min-height: 9rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.cardTextContainer p , .cardTextContainer h2 {
+  margin: 0 1rem .5rem 1rem;
+}
+
+.cardTextContainer a {
+  margin-top: 1.5rem;
+  height: 3rem;
+}
+
+.cardExpandBtn {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  border: none;
+  background: none;
+}
+
+.cardExpandBtn:focus {
+  outline: none;
+}
+
+.cardExpandBtn img {
+  transition-duration: .3s;
+  transform-origin: center;
+}
+
+.expanded .cardExpandBtn img {
+  transform: rotateX(180deg);
+}

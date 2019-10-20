@@ -111,3 +111,53 @@
   font-family: 'Gopher Text';
   font-weight: 800;
 }
+
+/* gopher display */
+
+@font-face {
+  src: url('../assets/fonts/GopherText-Hairline.otf');
+  font-family: 'Gopher Text';
+  font-weight: 100;
+}
+
+@font-face {
+  src: url('../assets/fonts/GopherText-Thin.otf');
+  font-family: 'Gopher Text';
+  font-weight: 200;
+}
+
+@font-face {
+  src: url('../assets/fonts/GopherDisplay-Light.otf');
+  font-family: 'Gopher Display';
+  font-weight: 300;
+}
+
+@font-face {
+  src: url('../assets/fonts/GopherDisplay-Regular.otf');
+  font-family: 'Gopher Display';
+  font-weight: 400;
+}
+
+@font-face {
+  src: url('../assets/fonts/GopherDisplay-Medium.otf');
+  font-family: 'Gopher Display';
+  font-weight: 500;
+}
+
+@font-face {
+  src: url('../assets/fonts/GopherDisplay-Bold.otf');
+  font-family: 'Gopher Display';
+  font-weight: 600;
+}
+
+@font-face {
+  src: url('../assets/fonts/GopherDisplay-Heavy.otf');
+  font-family: 'Gopher Display';
+  font-weight: 700;
+}
+
+@font-face {
+  src: url('../assets/fonts/GopherDisplay-Black.otf');
+  font-family: 'Gopher Display';
+  font-weight: 800;
+}

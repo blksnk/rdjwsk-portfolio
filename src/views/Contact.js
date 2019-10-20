@@ -110,7 +110,9 @@ const Input = ({ changeState, ...props }) => {
 }
 
 const submitForm = async (e, state, setSent) => {
+  e.preventDefault()
   console.log(state)
+  setTimeout(() => setSent(true), 1000)
 }
 
 export default Contact

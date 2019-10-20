@@ -3,6 +3,7 @@
   grid-row: 2 / 3;
   height: 100%;
   min-width: inherit;
+  padding-left: .5rem;
 }
 
 .topNavWrapper {
@@ -13,8 +14,10 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  background-image: linear-gradient(to bottom, var(--dark-grey), transparent);
+  background-image: linear-gradient(to bottom, var(--dark-grey) 20%, transparent);
   z-index: 10;
+  padding: .5rem;
+  pointer-events: none;
 }
 
 .topNavWrapper > * {
@@ -48,10 +51,15 @@
 }
 
 .titleLetter {
-  transition: .3s color;
+  --webkit-background-clip: ;
+  /* transition-duration: .3s; */
 }
 
 .titleLetter:hover {
+  background-color: var(--off-white);
+  background-image: url('../assets/images/grid.svg');
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   color: var(--primary);
   animation-name: spincursor;
   animation-duration: .5s;
@@ -77,6 +85,7 @@
   font-size: 1rem;
   transition-duration: .6s;
   display: inline-block;
+  pointer-events: all;
 }
 
 .navLink:hover {
@@ -90,12 +99,14 @@
   font-size: 1.8rem;
   line-height: 1.8rem;
   transition-duration: .6s;
+  pointer-events: all;
 }
 
 .text {
   font-family: 'Gopher Normal';
   font-weight: 500;
   font-size: 1rem;
+  line-height: 1rem;
 }
 
 .pickerWrapper {
@@ -107,6 +118,10 @@
   justify-content: flex-end;
   align-items: flex-end;
   z-index: 5;
+}
+
+.pickerWrapper * {
+  border-radius: 0;
 }
 
 .showPicker {
@@ -134,7 +149,47 @@
   z-index: 30;
 }
 
+.cardTitle {
+  font-family: 'Monument';
+  font-weight: normal;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
 
+.btn {
+  background-color: var(--primary);
+  border: none;
+  padding: .5rem 1rem;
+  color: var(--grey);
+  font-family: 'Monument';
+  font-weight: normal;
+  font-size: 1rem;
+  text-align: left;
+  transition-duration: .3s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  letter-spacing: .15rem;
+  /* color: var(--secondary); */
+  /* background-color: var(--medium-grey); */
+  padding-left: 2rem;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btnLink {
+  width: 100%;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btnLink .btn {
+  height: 100%;
+  width: 100%;
+}
 
 @keyframes spincursor {
   0% {
