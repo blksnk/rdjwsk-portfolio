@@ -3,7 +3,7 @@ import { Switch, Route, withRouter } from 'react-router-dom'
 
 import SideNav from './components/SideNav.js'
 
-import Projects from './views/Projects.js'
+import { Audio, Video } from './views/Projects.js'
 import About from './views/About.js'
 import Contact from './views/Contact.js'
 import { TopNav } from './components/Nav.js'
@@ -27,8 +27,8 @@ const TopNavWrapper = ({ history }) => {
 
 const Router = () => (
   <Switch>
-    <Route path='/audio' component={Projects}/>
-    <Route path='/video' render={(props) => <Projects {...props} isVideo={true}/>}/>
+    <Route path='/audio' component={Audio}/>
+    <Route path='/video' component={Video}/>
     <Route path='/about' component={About}/>
     <Route path='/contact' component={Contact}/>
     <Route path='/' component={HomeRedirect}/>
