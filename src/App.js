@@ -7,19 +7,22 @@ import Projects from './views/Projects.js'
 import About from './views/About.js'
 import Contact from './views/Contact.js'
 import { TopNav } from './components/Nav.js'
+import ScrollIcon from './components/ScrollIcon.js'
 
 
 const App = ({ history }) => (
   <main className="App">
+    <div className='transition-overlay'></div>
     <SideNav/>
     <Router/>
     <TopNavWrapper history={history}/>
+    {/*<ScrollIcon/>*/}
   </main>
 )
 
 const TopNavWrapper = ({ history }) => {
   const current = history.location.pathname.split('/')[1]
-  return <TopNav current={current}/>
+  return <TopNav history={history} current={current}/>
 }
 
 const Router = () => (

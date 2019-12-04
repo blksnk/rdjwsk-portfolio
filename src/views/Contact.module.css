@@ -92,7 +92,7 @@
   font-family: 'Monument';
   font-weight: normal;
   text-decoration: none;
-  color: var(--secondary);
+  color: var(--primary);
   margin-right: 1rem;
   transition-duration: .3s;
 }

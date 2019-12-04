@@ -1,5 +1,6 @@
 .page {
   /* background-image: url('../assets/images/grid.svg') */
+
 }
 
 .card {
@@ -7,6 +8,8 @@
   position: relative;
   min-height: 15rem;
   margin-bottom: 3rem;
+  margin-right: 1rem;
+  min-width: ;idth: 50vw;
   max-width: 40rem;
 }
 
@@ -27,15 +30,24 @@
   transition-timing-function: ease-out;
 }
 
+.expanded .cardThumbContainer {
+  cursor: zoom-out;
+}
+
 .cardThumb {
   object-fit: contain;
-  max-width: 100%;
-  filter: invert(0) grayscale(1);
+  width: 100%;
+  filter: invert(1) grayscale(1);
   transition-duration: .3s;
+  cursor: zoom-in;
 }
 
 .cardThumb:hover {
-  filter: invert(1) grayscale(1);
+  filter: invert(0) grayscale(1);
+}
+
+.expanded .cardThumb {
+  cursor: zoom-out;
 }
 
 .cardTextContainer {
@@ -64,6 +76,7 @@
   top: 1rem;
   border: none;
   background: none;
+  cursor: pointer;
 }
 
 .cardExpandBtn:focus {
@@ -71,10 +84,50 @@
 }
 
 .cardExpandBtn img {
-  transition-duration: .3s;
+  /* transition-duration: .3s; */
   transform-origin: center;
 }
 
 .expanded .cardExpandBtn img {
   transform: rotateX(180deg);
+}
+
+.projectCard {
+  margin: 0 1rem 2rem 1rem;
+  /* width: 100%; */
+  padding: 1rem;
+  background-color: var(--medium-grey);
+  max-width: 100%;
+}
+
+.cardMediaWrapper {
+  width: 100%;
+}
+
+.cardMediaWrapper video {
+  max-width: 100%;
+}
+
+.cardMediaWrapper audio {
+  /* min-height: 4rem; */
+  width: 100%;
+  color: var(--primary);
+}
+
+.projectCard:hover .title {
+  color: var(--primary);
+}
+
+.title {
+  font-family: 'Monument';
+  font-weight: bold;
+  color: var(--off-white);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  transition: .3s color;
+}
+
+.projectCard p {
+  margin-top: -.5rem;
+  margin-bottom: 1rem;
 }

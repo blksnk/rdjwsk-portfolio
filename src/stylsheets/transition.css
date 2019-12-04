@@ -1,0 +1,10 @@
+.transition-overlay {
+  position: fixed;
+  /* pointer-events: none; */
+  top: 0;
+  left: 0;
+  right: 100vw;
+  bottom: 0;
+  background-color: var(--primary);
+  z-index: 15;
+}

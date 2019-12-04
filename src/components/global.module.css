@@ -39,7 +39,7 @@
 .title {
   font-family: 'Monument';
   font-weight: bold;
-  font-size: 13.5vh;
+  font-size: 13vh;
   color: var(--off-white);
   text-decoration: none;
   text-align: left;
@@ -189,6 +189,12 @@
 .btnLink .btn {
   height: 100%;
   width: 100%;
+}
+
+.scrollIcon {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
 }
 
 @keyframes spincursor {

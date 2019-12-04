@@ -1,4 +1,4 @@
- <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="1rem">
-  <line stroke='#C2C1B4' stroke-width='3px' x1="0" y1="0" x2="1rem" y2="1rem"/>
-  <line stroke='#C2C1B4' stroke-width='3px' x1="1rem" y1="1rem" x2="2rem" y2="0"/>
+ <svg xmlns="http://www.w3.org/2000/svg" width="1.5rem" height=".75rem">
+  <line stroke='#C2C1B4' stroke-width='3px' x1="0" y1="0" x2=".75rem" y2=".75rem"/>
+  <line stroke='#C2C1B4' stroke-width='3px' x1=".75rem" y1=".75rem" x2="1.5rem" y2="0"/>
 </svg>

@@ -7,17 +7,17 @@
   --dark-grey: #1E1E1E;
   --black: #000;
   --primary: #FFFF00;
-  --secondary: #6320EE;
+  /* --secondary: #6320EE; */
+  --secondary: #2C87A1;
   /* --secondary: #FFB86F; */
   /* --secondary: #0B5351; */
-  /* --secondary: #395756; */
-  /* --secondary: #6320EE; */
 
   --third: #0009FF;
 }
 
 * {
   box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(255, 255, 0, .5);
 }
 
 body {
@@ -96,4 +96,9 @@ input:-internal-autofill-selected {
 
 ::-webkit-scrollbar {
   display: none;
+}
+
+::selection {
+  background: var(--primary) !important;
+  color: var(--black);
 }

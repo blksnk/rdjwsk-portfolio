@@ -1,0 +1,4 @@
+ <svg xmlns="http://www.w3.org/2000/svg" width="1rem" height="2rem">
+  <rect width="1rem" height="2rem" stroke-width="1px" stroke="#eae8db" rx=".5rem" ry=".5rem"/>
+  <line stroke="#eae8db" stroke-width="2px" x1=".5rem" y1=".5rem" x2=".5rem" y2="1.5rem"/>
+</svg>
