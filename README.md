@@ -18,15 +18,15 @@ Else if this doesn't return anything, you have to download nodeJS and npm at
 
 Clone the repository using the button at the top right corner, or type in
 
-## `git clone https://github.com/blksnk/rdjwsk-portfolio.git`
+### `git clone https://github.com/blksnk/rdjwsk-portfolio.git`
 
 Get to the repository folder
 
-## `cd rdjwsk-portfolio`
+### `cd rdjwsk-portfolio`
 
 Install all necessary dependencies
 
-## `npm install`
+### `npm install`
 
 
 
