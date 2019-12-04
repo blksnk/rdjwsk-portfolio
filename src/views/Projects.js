@@ -1,33 +1,9 @@
 import React from 'react'
-import { Text, CardTitle, BtnLink } from '../components/Text.js'
-import { getProjects } from '../helpers/storage.js'
-
+import { Text } from '../components/Text.js'
+import Spinner from '../components/Spinner.js'
+import { getVideo, getAudio } from '../helpers/storage.js'
 
 import s from './Projects.module.css'
-import arrow from '../assets/images/arrow.svg'
-
-const Card = ({ project, setExpandedIndex, expandIndex, index }) => {
-  const { name, link, thumb, description } = project
-  const expanded = expandIndex === index ? true : false
-  const expandIfNeeded = () => setExpandedIndex(expanded ? undefined : index)
-  return (
-    <article className={`${s.card} ${expanded ? s.expanded : ''}`} >
-      <button className={s.cardExpandBtn} onClick={expandIfNeeded}>
-        <img src={arrow} alt="expand"/>
-      </button>
-      <div className={s.cardTextContainer}>
-        <div>
-          <CardTitle>{name}</CardTitle>
-          <Text>{description}</Text>
-        </div>
-        <BtnLink target='_blank' rel='noopener noreferrer' href={link}>Play</BtnLink>
-      </div>
-      <div className={s.cardThumbContainer} onClick={expandIfNeeded}>
-        <img className={s.cardThumb} src={thumb} alt={name}/>
-      </div>
-    </article>
-  )
-}
 
 const NewCard = ({ project }) => {
   const { isVideo, title, source, description } = project
@@ -48,12 +24,17 @@ const NewCard = ({ project }) => {
   )
 }
 
-const Projects = ({ sourceData }) => {
+const Projects = ({ isVideo }) => {
   const [ data, setData ] = React.useState([])
   const [loaded, setLoaded] = React.useState(false)
   React.useEffect(() => {
     const getData = async () => {
-      const response = await getProjects()
+      let response
+      if(isVideo) {
+        response = await getVideo()
+      } else {
+        response = await getAudio()
+      }
       setLoaded(true)
       setData(response)
     }
@@ -63,6 +44,10 @@ const Projects = ({ sourceData }) => {
   })
   return (
     <section className={s.page}>
+      {!loaded
+        ? <Spinner/>
+        : null
+      }
       {data.map((item, index) => (
         <NewCard project={item} key={`project${index}`}/>
       ))}

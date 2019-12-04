@@ -7,7 +7,8 @@ import g from './global.module.css'
 
 const Nav = ({ history }) => (
   <nav className={g.nav}>
-    <NavBtn className={g.navLink} to='/projects'>Projects</NavBtn>
+    <NavBtn className={g.navLink} to='/audio'>Music</NavBtn>
+    <NavBtn className={g.navLink} to='/video'>Videos</NavBtn>
     <NavBtn className={g.navLink} to='/about'>About</NavBtn>
     <NavBtn className={g.navLink} to='/contact'>Contact</NavBtn>
   </nav>
@@ -32,9 +33,13 @@ const transitionAndRedirect = (e, history, to) => {
 
 export const TopNav = ({ current, history }) => (
   <div className={g.topNavWrapper}>
-    {current === 'projects'
-    ? <PageTitle>Projects</PageTitle>
-    : <NavBtn history={history} className={g.navLink} to='/projects'>Projects</NavBtn>}
+    {current === 'audio'
+    ? <PageTitle>Musics</PageTitle>
+    : <NavBtn history={history} className={g.navLink} to='/audio'>Musics</NavBtn>}
+
+    {current === 'video'
+    ? <PageTitle>Videos</PageTitle>
+    : <NavBtn history={history} className={g.navLink} to='/video'>Videos</NavBtn>}
 
     {current === 'about'
     ? <PageTitle>About</PageTitle>

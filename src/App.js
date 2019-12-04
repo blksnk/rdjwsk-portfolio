@@ -27,7 +27,8 @@ const TopNavWrapper = ({ history }) => {
 
 const Router = () => (
   <Switch>
-    <Route path='/projects' component={Projects}/>
+    <Route path='/audio' component={Projects}/>
+    <Route path='/video' render={(props) => <Projects {...props} isVideo={true}/>}/>
     <Route path='/about' component={About}/>
     <Route path='/contact' component={Contact}/>
     <Route path='/' component={HomeRedirect}/>
@@ -36,7 +37,7 @@ const Router = () => (
 
 const HomeRedirect = ({ history }) => {
   React.useEffect(() => {
-    history.push('/projects')
+    history.push('/audio')
   })
   return null
 }
