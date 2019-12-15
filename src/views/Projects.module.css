@@ -3,104 +3,19 @@
 
 }
 
-.card {
-  display: block;
-  position: relative;
-  min-height: 15rem;
-  margin-bottom: 3rem;
-  margin-right: 1rem;
-  min-width: ;idth: 50vw;
-  max-width: 40rem;
-}
-
-.cardThumbContainer {
-  overflow: hidden;
-  height: 6rem;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition-duration: .3s;
-  transition-timing-function: ease-out;
-}
-
-.expanded .cardThumbContainer {
-  height: unset;
-  transition-duration: .3s;
-  transition-timing-function: ease-out;
-}
-
-.expanded .cardThumbContainer {
-  cursor: zoom-out;
-}
-
-.cardThumb {
-  object-fit: contain;
-  width: 100%;
-  filter: invert(1) grayscale(1);
-  transition-duration: .3s;
-  cursor: zoom-in;
-}
-
-.cardThumb:hover {
-  filter: invert(0) grayscale(1);
-}
-
-.expanded .cardThumb {
-  cursor: zoom-out;
-}
-
-.cardTextContainer {
-  background-color: var(--grey);
-  padding-top: 1rem;
-  min-height: 9rem;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.cardTextContainer p , .cardTextContainer h2 {
-  margin: 0 1rem .5rem 1rem;
-}
-
-.cardTextContainer a {
-  margin-top: 1.5rem;
-  height: 3rem;
-}
-
-.cardExpandBtn {
-  position: absolute;
-  right: 1rem;
-  top: 1rem;
-  border: none;
-  background: none;
-  cursor: pointer;
-}
-
-.cardExpandBtn:focus {
-  outline: none;
-}
-
-.cardExpandBtn img {
-  /* transition-duration: .3s; */
-  transform-origin: center;
-}
-
-.expanded .cardExpandBtn img {
-  transform: rotateX(180deg);
+.pageSpinner {
+  margin: 100px auto;
 }
 
 .projectCard {
-  margin: 0 1rem 4rem 1rem;
+  margin: 0 1rem 6rem 1rem;
   /* width: 100%; */
   padding: 1rem;
   background-color: var(--medium-grey);
   max-width: 100%;
   position: relative;
   box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
-
+  
 }
 
 .cardMediaWrapper {

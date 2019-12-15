@@ -27,6 +27,17 @@ const NewCard = ({ isVideo, project, index }) => {
   )
 }
 
+const wavesurferOptions = {
+  waveColor: '#C2C1B4',
+  progressColor: '#FFFF00',
+  cursorColor: '#FFF',
+  barGap: 2,
+  barRadius: 2,
+  barWidth: 4,
+  responsive: true,
+  normalize: true,
+}
+
 const RenderWaveform = ({ url, index }) => {
   const [ waveHook, setWaveHook ] = React.useState(null)
   const [ loaded, setLoaded ] = React.useState(false)
@@ -49,14 +60,7 @@ const RenderWaveform = ({ url, index }) => {
   React.useEffect(() => {
     const wave = WaveSurfer.create({
       container: `#${id}`,
-      waveColor: '#C2C1B4',
-      progressColor: '#FFFF00',
-      cursorColor: '#FFF',
-      barGap: 2,
-      barRadius: 2,
-      barWidth: 4,
-      responsive: true,
-      normalize: true,
+      ...wavesurferOptions
     })
 
     wave.on('ready', () => {
@@ -98,7 +102,7 @@ export const Audio = () => {
   return (
     <section className={s.page}>
       {!loaded
-        ? <Spinner/>
+        ? <Spinner className={s.pageSpinner}/>
         : null
       }
       {data.map((item, index) => (
@@ -124,7 +128,7 @@ export const Video = () => {
   return (
     <section className={s.page}>
       {!loaded
-        ? <Spinner/>
+        ? <Spinner className={s.pageSpinner}/>
         : null
       }
       {data.map((item, index) => (
