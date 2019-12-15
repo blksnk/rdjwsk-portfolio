@@ -62,7 +62,7 @@ const RenderWaveform = ({ url, index }) => {
     wave.on('ready', () => {
       setLoaded(true)
     })
-    
+
     wave.load(url)
 
     setWaveHook(wave)
@@ -71,7 +71,7 @@ const RenderWaveform = ({ url, index }) => {
   return (
     <div className={s.waveContainer}>
       {!loaded
-        ? <Spinner/>
+        ? <div className={s.spinnerWrapper}><Spinner/></div>
         : null}
       <div className={s.wave} id={id}></div>
       <button onClick={playPause} className={s.playBtn}>

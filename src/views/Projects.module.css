@@ -109,6 +109,7 @@
 
 .cardMediaWrapper video {
   max-width: 100%;
+  width: 100%;
 }
 
 .cardMediaWrapper audio {
@@ -160,4 +161,14 @@
 .audioIcon {
   height: 3rem;
   width: 3rem;
+}
+
+.spinnerWrapper {
+  height: 128px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 3.5rem;
 }
