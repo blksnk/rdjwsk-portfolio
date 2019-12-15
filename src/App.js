@@ -7,8 +7,6 @@ import { Audio, Video } from './views/Projects.js'
 import About from './views/About.js'
 import Contact from './views/Contact.js'
 import { TopNav } from './components/Nav.js'
-import ScrollIcon from './components/ScrollIcon.js'
-
 
 const App = ({ history }) => (
   <main className="App">

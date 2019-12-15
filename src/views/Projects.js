@@ -1,11 +1,14 @@
 import React from 'react'
+import WaveSurfer from 'wavesurfer.js'
 import { Text } from '../components/Text.js'
 import Spinner from '../components/Spinner.js'
 import { getVideo, getAudio } from '../helpers/storage.js'
+import playIcon from '../assets/icons/play_arrow.svg'
+import pauseIcon from '../assets/icons/pause.svg'
 
 import s from './Projects.module.css'
 
-const NewCard = ({ isVideo, project }) => {
+const NewCard = ({ isVideo, project, index }) => {
   const { title, source, description } = project
   const url = `${process.env.REACT_APP_DATABASE_URL}${source.url}`
   return (
@@ -17,16 +20,71 @@ const NewCard = ({ isVideo, project }) => {
       <div className={s.cardMediaWrapper}>
         {isVideo
           ? <video src={url} controls muted></video>
-          : <audio src={url} controls></audio>
+          : <RenderWaveform url={url} index={index}/>
         }
       </div>
     </article>
   )
 }
 
+const RenderWaveform = ({ url, index }) => {
+  const [ waveHook, setWaveHook ] = React.useState(null)
+  const [ loaded, setLoaded ] = React.useState(false)
+  const [ playing, setPlaying ] = React.useState(false)
+
+  const playPause = () => {
+    if(waveHook) {
+      if(!playing) {
+        waveHook.play()
+        setPlaying(true)
+      } else {
+        waveHook.pause()
+        setPlaying(false)
+      }
+    }
+  }
+
+  const id = `wave${index}`
+
+  React.useEffect(() => {
+    const wave = WaveSurfer.create({
+      container: `#${id}`,
+      waveColor: '#C2C1B4',
+      progressColor: '#FFFF00',
+      cursorColor: '#FFF',
+      barGap: 2,
+      barRadius: 2,
+      barWidth: 4,
+      responsive: true,
+      normalize: true,
+    })
+
+    wave.on('ready', () => {
+      setLoaded(true)
+    })
+    
+    wave.load(url)
+
+    setWaveHook(wave)
+  }, [])
+
+  return (
+    <div className={s.waveContainer}>
+      {!loaded
+        ? <Spinner/>
+        : null}
+      <div className={s.wave} id={id}></div>
+      <button onClick={playPause} className={s.playBtn}>
+        <img className={s.audioIcon} alt={playing ? 'pause' : 'play'} src={playing ? pauseIcon : playIcon}/>
+      </button>
+    </div>
+  )
+}
+
 export const Audio = () => {
   const [ data, setData ] = React.useState([])
   const [loaded, setLoaded] = React.useState(false)
+
   React.useEffect(() => {
     const getData = async () => {
       const response = await getAudio()
@@ -44,7 +102,7 @@ export const Audio = () => {
         : null
       }
       {data.map((item, index) => (
-        <NewCard project={item} key={`project${index}`}/>
+        <NewCard project={item} index={index} key={`project${index}`}/>
       ))}
     </section>
   )
