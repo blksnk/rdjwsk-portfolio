@@ -32,8 +32,9 @@ const wavesurferOptions = {
   progressColor: '#FFFF00',
   cursorColor: '#FFF',
   barGap: 2,
-  barRadius: 2,
-  barWidth: 4,
+  barRadius: 0,
+  barWidth: 2,
+  height: 100,
   responsive: true,
   normalize: true,
 }

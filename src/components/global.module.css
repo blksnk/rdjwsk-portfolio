@@ -60,9 +60,6 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: var(--primary);
-  animation-name: spincursor;
-  animation-duration: .5s;
-  animation-iteration-count: infinite;
 }
 
 .nav {
@@ -99,6 +96,7 @@
   line-height: 1.8rem;
   transition-duration: .6s;
   pointer-events: all;
+  cursor: pointer;
 }
 
 .text {
@@ -235,28 +233,6 @@
   } 50% { 
     transform: scale(1.0);
     -webkit-transform: scale(1.0);
-  }
-}
-
-@keyframes spincursor {
-  0% {
-    cursor: nwse-resize;
-  }
-
-  25% {
-    cursor: ns-resize;
-  }
-
-  50% {
-    cursor: nesw-resize;
-  }
-
-  75% {
-    cursor: ew-resize;
-  }
-
-  100% {
-    cursor: nwse-resize;
   }
 }
 
