@@ -2,21 +2,27 @@ import React from 'react'
 import { Switch, Route, withRouter } from 'react-router-dom'
 
 import SideNav from './components/SideNav.js'
-
 import { Audio, Video } from './views/Projects.js'
 import About from './views/About.js'
 import Contact from './views/Contact.js'
 import { TopNav } from './components/Nav.js'
 
-const App = ({ history }) => (
+import wave from './assets/images/loop.webm'
+
+const App = ({ history }) => {
+
+  return (
   <main className="App">
+    <div id='app-background'>
+      <video id='app-background-video' src={wave} autoPlay loop muted></video>
+    </div>
     <div className='transition-overlay'></div>
     <SideNav/>
     <Router/>
     <TopNavWrapper history={history}/>
     {/*<ScrollIcon/>*/}
   </main>
-)
+)}
 
 const TopNavWrapper = ({ history }) => {
   const current = history.location.pathname.split('/')[1]

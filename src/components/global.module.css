@@ -62,11 +62,11 @@
 }
 
 .titleLetter:hover {
-  background-color: var(--off-white);
-  background-image: url('../assets/images/grid.svg');
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: var(--primary);
+  /* background-color: var(--off-white); */
+  /* background-image: url('../assets/images/grid.svg'); */
+  /* -webkit-background-clip: text; */
+  /* -webkit-text-fill-color: transparent; */
+  opacity: 0;
 }
 
 .nav {
@@ -213,7 +213,7 @@
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-color: #FFFF00;
+  background-color: var(--primary);
   opacity: 0.6;
   position: absolute;
   top: 0;

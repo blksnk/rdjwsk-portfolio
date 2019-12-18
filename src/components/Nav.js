@@ -35,7 +35,7 @@ export const TopNav = ({ current, history }) => (
   <div className={g.topNavWrapper}>
     {current === 'audio'
     ? <PageTitle>Musics</PageTitle>
-    : <NavBtn history={history} className={g.navLink} to='/audio'>Musics</NavBtn>}
+    : <NavBtn history={history} className={g.navLink} to='/audio'>Music</NavBtn>}
 
     {current === 'video'
     ? <PageTitle>Videos</PageTitle>

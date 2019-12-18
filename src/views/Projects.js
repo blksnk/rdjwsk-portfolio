@@ -10,7 +10,6 @@ import s from './Projects.module.css'
 
 const NewCard = ({ isVideo, project, index }) => {
   const { title, source, description } = project
-  console.log(source)
   const url = `${process.env.REACT_APP_DATABASE_URL}${source.url}`
   return (
     <article className={`${s.projectCard} ${isVideo ? s.cardVideo : ''}`}>
@@ -72,6 +71,10 @@ const RenderWaveform = ({ url, index }) => {
     wave.load(url)
 
     setWaveHook(wave)
+
+    return () => {
+      wave.on('ready', null)
+    }
   }, [])
 
   return (
@@ -100,7 +103,7 @@ export const Audio = () => {
     if(!loaded) {
       getData()
     }
-  })
+  }, [])
   return (
     <section className={s.page}>
       {!loaded
