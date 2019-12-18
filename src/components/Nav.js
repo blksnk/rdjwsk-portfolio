@@ -56,7 +56,7 @@ export const TopNav = ({ current, history }) => {
   return (
   <div className={g.topNavWrapper}>
     {current === 'audio'
-    ? <PageTitle>Musics</PageTitle>
+    ? <PageTitle>Music</PageTitle>
     : <NavBtn images={images} history={history} className={g.navLink} to='/audio'>Music</NavBtn>}
 
     {current === 'video'
