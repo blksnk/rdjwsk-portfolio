@@ -73,8 +73,8 @@ const RenderWaveform = ({ url, index }) => {
     setWaveHook(wave)
 
     return () => {
-      waveHook.on('ready', null)
-      waveHook.pause()
+      wave.on('ready', null)
+      wave.pause()
     }
   }, [])
 
