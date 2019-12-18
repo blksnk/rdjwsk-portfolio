@@ -26,7 +26,7 @@ const App = ({ history }) => {
   </main>
 )}
 
-const Transition = () => <div className='transition-overlay'><img src={sasuke} alt=""/></div>
+const Transition = () => <div className='transition-overlay'></div>
 
 const TopNavWrapper = ({ history }) => {
   const current = history.location.pathname.split('/')[1]

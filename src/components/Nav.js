@@ -28,13 +28,13 @@ const transitionAndRedirect = (e, history, to, images) => {
   e.preventDefault()
   e.stopPropagation()
   const overlay = document.querySelector('.transition-overlay')
-  const img = overlay.querySelector('img')
-  TweenMax.set(img, { src: chooseRandomImage(images) })
-  TweenMax.to(overlay, .3, {right: 0, ease: Power2.easeInOut}).delay(.1)
-  TweenMax.to(overlay, .3, {right: '100vw', ease: Power2.easeInOut}).delay(.5)
+  const img = chooseRandomImage(images)
+  TweenMax.set(overlay, { backgroundImage: `url(${img})` })
+  TweenMax.set(overlay, { right: 0, delay: .1 })
+  TweenMax.set(overlay, {right: '100vw', delay: .5})
   setTimeout(() => {
     history.push(to)
-  }, 300)
+  }, 500)
 }
 
 const chooseRandomImage = (images) => {

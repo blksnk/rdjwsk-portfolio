@@ -1,6 +1,8 @@
 .transition-overlay {
   position: fixed;
   /* pointer-events: none; */
+  background-position: center;
+  background-size: cover;
   top: 0;
   right: 100vw;
   height: 100vh;
