@@ -2,9 +2,14 @@
   position: fixed;
   /* pointer-events: none; */
   top: 0;
-  left: 0;
   right: 100vw;
+  height: 100vh;
+  width: 100vw;
   bottom: 0;
-  background-color: var(--primary);
+  background-color: var(--dark-grey);
+  box-shadow: 1rem 0 2rem #000;
   z-index: 15;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

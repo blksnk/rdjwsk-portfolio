@@ -1,0 +1,23 @@
+.banner {
+  max-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 4rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, .5);
+}
+
+.banner video {
+  filter: grayscale(1);
+}
+
+.title {
+  margin-bottom: 2rem;
+
+}
+
+.text {
+
+}

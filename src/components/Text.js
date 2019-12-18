@@ -8,13 +8,13 @@ const className = (component, custom) => {
 }
 
 export const PageTitle = ({ children, ...props }) => (
-  <h1 className={className('pageTitle', props.className)} {...props} >
+  <h1  className={className('pageTitle', props.className)} >
     {children}
   </h1>
 )
 
 export const Text = ({ children, ...props }) => (
-  <p className={className('text', props.className)} {...props} >
+  <p className={className('text', props.className)} >
     {children}
   </p>
 )

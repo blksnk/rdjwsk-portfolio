@@ -7,6 +7,8 @@ import About from './views/About.js'
 import Contact from './views/Contact.js'
 import { TopNav } from './components/Nav.js'
 
+import sasuke from './assets/images/sasuke.gif'
+
 import wave from './assets/images/loop.webm'
 
 const App = ({ history }) => {
@@ -16,13 +18,15 @@ const App = ({ history }) => {
     <div id='app-background'>
       <video id='app-background-video' src={wave} autoPlay loop muted></video>
     </div>
-    <div className='transition-overlay'></div>
+    <Transition/>
     <SideNav/>
     <Router/>
     <TopNavWrapper history={history}/>
     {/*<ScrollIcon/>*/}
   </main>
 )}
+
+const Transition = () => <div className='transition-overlay'><img src={sasuke} alt=""/></div>
 
 const TopNavWrapper = ({ history }) => {
   const current = history.location.pathname.split('/')[1]
