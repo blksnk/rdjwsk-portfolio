@@ -60,8 +60,8 @@ export const TopNav = ({ current, history }) => {
     : <NavBtn images={images} history={history} className={g.navLink} to='/audio'>Music</NavBtn>}
 
     {current === 'video'
-    ? <PageTitle>Videos</PageTitle>
-    : <NavBtn images={images} history={history} className={g.navLink} to='/video'>Videos</NavBtn>}
+    ? <PageTitle>Video</PageTitle>
+    : <NavBtn images={images} history={history} className={g.navLink} to='/video'>Video</NavBtn>}
 
     {current === 'about'
     ? <PageTitle>About</PageTitle>
