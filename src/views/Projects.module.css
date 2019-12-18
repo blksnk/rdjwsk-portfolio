@@ -38,7 +38,7 @@
 }
 
 .cardVideo {
-
+  max-height: 100vh;
 }
 
 .projectCard:hover .title {
