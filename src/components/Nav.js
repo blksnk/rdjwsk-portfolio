@@ -31,15 +31,16 @@ const transitionAndRedirect = (e, history, to, images) => {
   const img = chooseRandomImage(images)
   TweenMax.set(overlay, { backgroundImage: `url(${img})` })
   TweenMax.set(overlay, { right: 0, delay: .1 })
-  TweenMax.set(overlay, {right: '100vw', delay: 1.1})
+  TweenMax.set(overlay, {right: '100vw', delay: .6})
   setTimeout(() => {
     history.push(to)
   }, 500)
 }
 
 const chooseRandomImage = (images) => {
-  console.log(images)
-  return images[Math.floor(Math.random() * (images.length - 1))]
+  const index = Math.floor(Math.random() * (images.length))
+  console.log(images, index)
+  return images[index]
 }
 
 export const TopNav = ({ current, history }) => {
