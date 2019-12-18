@@ -10,16 +10,17 @@ import s from './Projects.module.css'
 
 const NewCard = ({ isVideo, project, index }) => {
   const { title, source, description } = project
+  console.log(source)
   const url = `${process.env.REACT_APP_DATABASE_URL}${source.url}`
   return (
-    <article className={s.projectCard}>
+    <article className={`${s.projectCard} ${isVideo ? s.cardVideo : ''}`}>
       <h2 className={s.title}>{title}</h2>
       {description
         ? <Text>{description}</Text>
         : null}
-      <div className={s.cardMediaWrapper}>
+      <div className={s.cardMediaWrapper} >
         {isVideo
-          ? <video src={url} controls muted></video>
+          ? <video src={url} controls preload="metadata" ></video>
           : <RenderWaveform url={url} index={index}/>
         }
       </div>
