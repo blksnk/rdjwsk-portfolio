@@ -3,6 +3,8 @@
   grid-row: 2 / 3;
   height: 100%;
   min-width: inherit;
+  background-color: var(--primary);
+  padding: 1rem 1rem 0 1rem;
 }
 
 .topNavWrapper {
@@ -39,7 +41,8 @@
   font-family: 'Monument';
   font-weight: bold;
   font-size: 13vh;
-  color: var(--off-white);
+  line-height: 13vh;
+  color: var(--dark-grey);
   text-decoration: none;
   text-align: left;
   vertical-align: top;
@@ -47,9 +50,13 @@
   writing-mode: vertical-lr;
   line-height: 10vh;
   transition-duration: .3s;
+  user-select: none;
+  
 }
 
 .titleLetter {
+  color: var(--dark-grey);
+  user-select: none;
   --webkit-background-clip: ;
   /* transition-duration: .3s; */
 }
